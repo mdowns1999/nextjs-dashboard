@@ -8,7 +8,12 @@ import { Suspense } from "react";
 import { fetchInvoicesPages } from "@/app/lib/data";
 
 // Force dynamic rendering to prevent build-time database calls
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
+
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Invoices",
+};
 
 export default async function Page(props: {
   searchParams?: Promise<{
